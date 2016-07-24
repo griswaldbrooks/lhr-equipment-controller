@@ -1,4 +1,8 @@
-# Igor's Brain
+# Liquid Handling Robot Equipment Controller
+
+Code for the Arduino Uno that handles the switching of various benchtop equipment.
+
+# Legacy README
 
 The firmware that controls the Open Source Bioserver aka "Igor" (https://forum.arcturus.io/t/open-source-bioserver).
 This robot is composed by OpenPCR, DIY Incubators, DIY Transilluminators, Shaker, Centrifuge, Gel electrophoresis, pipette machine based on OpenTrons design, temperature and humidity sensors, cameras, arduino and a Raspberry PI2.
