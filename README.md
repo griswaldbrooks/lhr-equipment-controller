@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/griswaldbrooks/lhr-equipment-controller.svg?branch=master)](https://travis-ci.org/griswaldbrooks/lhr-equipment-controller)
+
 # Liquid Handling Robot Equipment Controller
 
 Code for the Arduino Uno that handles the switching of various benchtop equipment.
