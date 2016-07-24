@@ -1,6 +1,6 @@
-// Igor firmware
+#include <DHT.h>
 
-#include "DHT.h"
+// Igor firmware
 
 #define DHTTYPE DHT22 // DHT 22  (AM2302)
 
