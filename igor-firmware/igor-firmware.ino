@@ -94,20 +94,20 @@ void loop()
           digitalWrite(TRANSILUMINATOR_UV_PIN, HIGH);
           Serial.println("1");
         }
-        if (buffer[0] == '2') {
-          // check if returns are valid, if they are NaN (not a number) then something went wrong!
-          if (isnan(t) || isnan(h)) 
-          {
-            Serial.println("Failed to read from DHT");
-          } else {
-            Serial.print("Humidity: "); 
-            Serial.print(h);
-            Serial.print("% ");
-            Serial.print("Temperature: "); 
-            Serial.print(t);
-            Serial.println("C");
-          }      
-        }
+       // if (buffer[0] == '2') {
+       //   // check if returns are valid, if they are NaN (not a number) then something went wrong!
+       //   if (isnan(t) || isnan(h)) 
+       //   {
+       //     Serial.println("Failed to read from DHT");
+       //   } else {
+       //     Serial.print("Humidity: "); 
+       //     Serial.print(h);
+       //     Serial.print("% ");
+       //     Serial.print("Temperature: "); 
+       //     Serial.print(t);
+       //     Serial.println("C");
+       //   }      
+       //  }
         if (buffer[0] == '3') {
           // turn igor light off.
           digitalWrite(IGOR_LIGHT_PIN, LOW);
@@ -158,20 +158,20 @@ void loop()
           digitalWrite(TRANSILUMINATOR_LIGHT_PIN, LOW);
           Serial.println("C");
         }
-        if (buffer[0] == 'D') {
-          // check if returns are valid, if they are NaN (not a number) then something went wrong!
-          if (isnan(t2) || isnan(h2)) 
-          {
-            Serial.println("Failed to read from DHT");
-          } else {
-            Serial.print("Humidity: "); 
-            Serial.print(h2);
-            Serial.print("% ");
-            Serial.print("Temperature: "); 
-            Serial.print(t2);
-            Serial.println("C");
-          }      
-        }
+       // if (buffer[0] == 'D') {
+       //   // check if returns are valid, if they are NaN (not a number) then something went wrong!
+       //   if (isnan(t2) || isnan(h2)) 
+       //   {
+       //     Serial.println("Failed to read from DHT");
+       //   } else {
+       //     Serial.print("Humidity: "); 
+       //     Serial.print(h2);
+       //     Serial.print("% ");
+       //     Serial.print("Temperature: "); 
+       //     Serial.print(t2);
+       //     Serial.println("C");
+       //   }      
+       // }
       }
     }
   
