@@ -1,14 +1,14 @@
 // Igor firmware
 
-#include "DHT.h"
+// #include "DHT.h"
 
-#define DHTTYPE DHT22 // DHT 22  (AM2302)
+// #define DHTTYPE DHT22 // DHT 22  (AM2302)
 
-#define DHTPIN A0
-DHT dht(DHTPIN, DHTTYPE);
+// #define DHTPIN A0
+// DHT dht(DHTPIN, DHTTYPE);
 
-#define DHTPIN2 A3
-DHT dht2(DHTPIN2, DHTTYPE);
+// #define DHTPIN2 A3
+// DHT dht2(DHTPIN2, DHTTYPE);
 
 #define INCUBATOR_LIGHT_PIN A1
 #define TRANSILUMINATOR_UV_PIN A2
@@ -59,9 +59,9 @@ void setup()
     Serial.begin(9600);
 
     // starts the incubator temperature sensor
-    dht.begin();
+    // dht.begin();
     // starts the shaker incubator temperature sensor
-    dht2.begin();
+    // dht2.begin();
 }
 
 char buffer[64];
@@ -74,11 +74,11 @@ void loop()
    
     // Reading temperature or humidity takes about 250 milliseconds!
     // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
-    float h = dht.readHumidity();
-    float t = dht.readTemperature();
+    // float h = dht.readHumidity();
+    // float t = dht.readTemperature();
 
-    float h2 = dht2.readHumidity();
-    float t2 = dht2.readTemperature();
+    // float h2 = dht2.readHumidity();
+    // float t2 = dht2.readTemperature();
     
     // implement serial read bytes and read command
     if (Serial.available()) {
@@ -175,20 +175,20 @@ void loop()
       }
     }
   
-    if (t < 37) {
-      //turn incubator light on
-      digitalWrite(INCUBATOR_LIGHT_PIN, HIGH);
-    } else {
-      //turn incubator light off
-      digitalWrite(INCUBATOR_LIGHT_PIN, LOW);
-    }
+    // if (t < 37) {
+    //   //turn incubator light on
+    //   digitalWrite(INCUBATOR_LIGHT_PIN, HIGH);
+    // } else {
+    //   //turn incubator light off
+    //   digitalWrite(INCUBATOR_LIGHT_PIN, LOW);
+    // }
 
-    if (t2 < 37) {
-      //turn incubator light on
-      digitalWrite(SHAKER_INCUBATOR_LIGHT, HIGH);
-    } else {
-      //turn incubator light off
-      digitalWrite(SHAKER_INCUBATOR_LIGHT, LOW);
-    }
+    // if (t2 < 37) {
+    //   //turn incubator light on
+    //   digitalWrite(SHAKER_INCUBATOR_LIGHT, HIGH);
+    // } else {
+    //   //turn incubator light off
+    //   digitalWrite(SHAKER_INCUBATOR_LIGHT, LOW);
+    // }
     
 }
